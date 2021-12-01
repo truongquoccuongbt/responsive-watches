@@ -329,7 +329,7 @@ button {
 
 /*=============== BUTTONS ===============*/
 .button {
-  display: inline;
+  display: inline-block;
   background-color: var(--button-color);
   color: #fff;
   padding: 1.25rem 2rem;
@@ -356,10 +356,107 @@ button {
 }
 
 /*=============== FEATURED ===============*/
+.featured__container {
+  row-gap: 1.5rem;
+}
 
+.featured__card {
+  position: relative;
+  text-align: center;
+  background-color: var(--container-color);
+  border: 1px solid var(--body-color);
+  transition: .3s;
+}
+
+.featured__tag {
+  background-color: var(--first-color);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 3rem;
+  left: -1rem;
+  padding: 0.5rem 1rem;
+}
+
+.featured__img {
+  height: 214px;
+  margin-bottom: var(--mb-1);
+}
+
+.featured__title,
+.featured__price {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-bold);
+}
+
+.featured__title {
+  text-transform: uppercase;
+  margin-bottom: var(--mb-0-75);
+}
+
+.featured__price {
+  color: var(--first-color);
+  display: block;
+  transition: .3s;
+  
+}
+
+.featured__button {
+  font-size: var(--small-font-size);
+  transform: translateY(1rem);
+  opacity: 0;
+}
+
+.featured__card:hover {
+  box-shadow: 0 12px 32px hsla(0, 0%, 20%, .1);
+  padding: 2rem 0 3rem 0;
+}
+
+.featured__card:hover .featured__button {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.featured__card:hover .featured__price {
+  margin-bottom: var(--mb-1);
+}
 
 /*=============== STORY ===============*/
+.story__container {
+  row-gap: 7rem;
+}
 
+.story__title {
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.story__decription  {
+  margin-bottom: var(--mb-2-5);
+}
+
+.story__images {
+  position: relative;
+}
+
+.story__img,
+.story__square {
+  width: 250px;
+}
+
+.story__square {
+  background-color: var(--first-color);
+  height: 250px;
+}
+
+.story__img {
+  position: absolute;
+  left: 3rem;
+  top: -3rem
+}
 
 /*=============== PRODUCTS ===============*/
 
